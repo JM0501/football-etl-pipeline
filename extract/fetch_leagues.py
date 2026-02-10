@@ -11,8 +11,9 @@ def fetch_leagues():
     response = requests.get(url, headers=HEADERS)
     response.raise_for_status()
     return response.json().get("response", [])
-
+"""
 if __name__ == "__main__":
     data = fetch_leagues()
     print(f"Total leagues returned: {len(data)}")
     print(data[:2])  # preview first 2 leagues
+"""

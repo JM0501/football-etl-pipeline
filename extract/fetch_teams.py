@@ -15,10 +15,11 @@ def fetch_teams(league_id: int, season: int):
     response = requests.get(url, headers=HEADERS, params=params)
     response.raise_for_status()
     return response.json().get("response", [])
-
+"""
 if __name__ == "__main__":
     league_id = 39  # Premier League
     season = 2023
     teams = fetch_teams(league_id, season)
     print(f"Total teams returned: {len(teams)}")
     print(teams[:2])  # preview first 2 teams
+"""
