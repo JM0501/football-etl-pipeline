@@ -15,5 +15,9 @@ try:
     # Test: list collections (should be empty if new)
     collections = db.list_collection_names()
     print(f"Connected to database '{MONGO_DB_NAME}'. Collections: {collections}")
+    db.leagues.drop()
+    db.teams.drop()
+    db.fixtures.drop()
+    print("Dropped existing collections for a clean test.")
 except Exception as e:
     print("Could not connect to MongoDB:", e)

@@ -16,7 +16,7 @@ def main():
     print("🔹 Starting ETL pipeline...\n")
 
     # --- LEAGUES ---
-    raw_leagues = fetch_leagues().get("response", [])
+    raw_leagues = fetch_leagues()
     print(f"Fetched {len(raw_leagues)} leagues from API.")
     leagues_data = transform_leagues(raw_leagues)
     print(f"Transformed {len(leagues_data)} leagues.")

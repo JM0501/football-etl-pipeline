@@ -25,5 +25,7 @@ Thumbs.db
 *.db
 
 # Ignore any other sensitive or local configs
+test_mongo_connection.py
 config/settings.py
 requirements.txt
+app/*
